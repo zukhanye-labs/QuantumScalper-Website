@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuantumScalper — Autonomous Forex Execution Engine</title>
+<meta name="description" content="QuantumScalper is an AI-driven forex scalping robot for MT4/MT5. Message us on WhatsApp to buy your license.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav>
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" fill="none">
+        <path d="M50 8 C72 8 88 26 88 50 C88 68 76 82 60 87 L60 68 C70 63 76 57 76 46 C76 30 64 20 50 20 C36 20 24 30 24 46 C24 58 31 66 42 70 L42 90 L58 90 L58 76 L50 76 C34 76 12 64 12 46 C12 26 28 8 50 8 Z" fill="#33ee8c"/>
+      </svg>
+      <span class="brand-name">Quantum<span>Scalper</span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#performance">Performance</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#pricing" class="btn btn-ghost">View pricing</a>
+      <button class="btn btn-primary wa-cta" data-msg="Hi! I'd like to buy QuantumScalper.">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.87 9.87 0 0 0 4.76 1.21h.01c5.46 0 9.91-4.45 9.91-9.92C21.96 6.45 17.5 2 12.04 2Zm5.83 14.1c-.24.68-1.4 1.3-1.93 1.35-.5.05-1 .24-3.35-.7-2.84-1.14-4.66-3.99-4.8-4.18-.14-.19-1.14-1.52-1.14-2.9 0-1.37.72-2.05.97-2.33.25-.28.56-.35.75-.35.19 0 .38 0 .54.01.17.01.4-.06.63.48.24.56.8 1.94.87 2.08.07.14.12.31.02.5-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.21.72-.84.92-1.13.19-.29.38-.24.63-.14.25.1 1.62.76 1.9.9.28.14.46.21.53.33.08.12.08.68-.16 1.36Z"/></svg>
+        Buy on WhatsApp
+      </button>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </nav>
+</header>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Autonomous MT4 / MT5 Execution</span>
+      <h1>Let the algorithm<br>scalp the spread<br>while you <em>live your life</em>.</h1>
+      <p class="lead">QuantumScalper reads volatility, spread, and momentum tick-by-tick — firing high-probability trades in seconds and closing them before the noise catches up. No screen time required.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary wa-cta" data-msg="Hi! I'd like to buy QuantumScalper.">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.87 9.87 0 0 0 4.76 1.21h.01c5.46 0 9.91-4.45 9.91-9.92C21.96 6.45 17.5 2 12.04 2Zm5.83 14.1c-.24.68-1.4 1.3-1.93 1.35-.5.05-1 .24-3.35-.7-2.84-1.14-4.66-3.99-4.8-4.18-.14-.19-1.14-1.52-1.14-2.9 0-1.37.72-2.05.97-2.33.25-.28.56-.35.75-.35.19 0 .38 0 .54.01.17.01.4-.06.63.48.24.56.8 1.94.87 2.08.07.14.12.31.02.5-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.21.72-.84.92-1.13.19-.29.38-.24.63-.14.25.1 1.62.76 1.9.9.28.14.46.21.53.33.08.12.08.68-.16 1.36Z"/></svg>
+          Buy QuantumScalper
+        </button>
+        <a href="#performance" class="btn btn-ghost">See live performance ↓</a>
+      </div>
+      <div class="hero-proof">
+        <span class="avatars"><span></span><span></span><span></span><span></span></span>
+        <span>Trusted by 2,300+ traders across 40 countries</span>
+      </div>
+    </div>
+
+    <div class="hero-chart reveal">
+      <div class="hero-chart-head">
+        <div>
+          <div class="pair">EQUITY CURVE · USD</div>
+          <div class="price">$48,213 <small id="heroDelta">▲ 2.4%</small></div>
+        </div>
+        <span class="eyebrow" style="font-size:10.5px;">LIVE ACCOUNT</span>
+      </div>
+      <canvas id="equityHero"></canvas>
+      <div class="hero-chart-foot">
+        <span>90-day verified sample</span>
+        <span>Updated continuously</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>87.4%</b><span>Win rate</span></div>
+    <div class="stat"><b>6.1%</b><span>Avg. monthly return</span></div>
+    <div class="stat"><b>4.8%</b><span>Max drawdown</span></div>
+    <div class="stat"><b>12</b><span>Pairs supported</span></div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Built for execution</span>
+      <h2>Engineered like a trading desk, not a script</h2>
+      <p>Every module in QuantumScalper exists to protect capital first and capture opportunity second.</p>
+    </div>
+    <div class="feature-grid">
+
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M21 7v6h-6"/></svg></div>
+        <h3>Adaptive scalping core</h3>
+        <p>Reacts to live tick volatility and re-times entries every fraction of a second instead of following a fixed schedule.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Spread & slippage filter</h3>
+        <p>Trades are skipped automatically when spread widens beyond your broker's safe range, protecting entries during news spikes.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M6 15l4-5 3 3 5-7"/></svg></div>
+        <h3>Multi-pair execution</h3>
+        <p>Runs across 12 major and minor pairs at once, sizing each position from your account balance and risk setting.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+        <h3>Drawdown shield</h3>
+        <p>A built-in daily loss cap halts new trades once your threshold is hit, then resumes automatically the next session.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 10h16M10 4v16"/></svg></div>
+        <h3>Broker & VPS agnostic</h3>
+        <p>Works on any MT4 or MT5 broker with market or ECN execution — no proprietary platform lock-in.</p>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3M21 12a9 9 0 1 1-9-9"/></svg></div>
+        <h3>24/5 autonomous run</h3>
+        <p>Stays live across every session — Sydney, Tokyo, London, New York — closing all positions before the weekend gap.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERFORMANCE ============ -->
+<section class="performance" id="performance">
+  <div class="wrap">
+    <div class="perf-panel reveal">
+      <div>
+        <span class="perf-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-9-9"/></svg>
+          Myfxbook-style verified sample
+        </span>
+        <h3>Real account. Real ticks. No repainting.</h3>
+        <p>This is a live 90-day sample run at 1% risk per trade on a standard ECN account. Results are shown for transparency, not as a promise of future performance.</p>
+        <ul class="perf-list">
+          <li>Starting balance <b>$10,000</b></li>
+          <li>Net profit (90d) <b>+$4,821</b></li>
+          <li>Profit factor <b>1.86</b></li>
+          <li>Average trade length <b>4m 12s</b></li>
+        </ul>
+      </div>
+      <div>
+        <canvas id="equityBig"></canvas>
+        <p class="disclaimer">Forex trading involves substantial risk of loss and is not suitable for every investor. Past performance, including the results shown above, is not a reliable indicator of future results. Only trade with capital you can afford to lose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get running today</span>
+      <h2>From message to live trades in minutes</h2>
+      <p>No coding, no complicated setup — just three steps over WhatsApp.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card reveal">
+        <div class="how-num">1</div>
+        <h3>Message us on WhatsApp</h3>
+        <p>Tap any "Buy" button, tell us your account type, and we'll confirm your license and payment method directly in chat.</p>
+      </div>
+      <div class="how-card reveal">
+        <div class="how-num">2</div>
+        <h3>Receive your files</h3>
+        <p>You'll get the QuantumScalper .ex4/.ex5 file, a setup guide, and your personal license key by return message.</p>
+      </div>
+      <div class="how-card reveal">
+        <div class="how-num">3</div>
+        <h3>Attach and go live</h3>
+        <p>Drop it into MT4 or MT5, attach it to a chart, enable auto-trading — QuantumScalper handles the rest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Simple licensing</span>
+      <h2>Pick your plan, buy in one message</h2>
+      <p>Every license runs for 3 months, then simply renews at the same price — one WhatsApp message and you're covered for another 3 months.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card reveal">
+        <h3>Starter</h3>
+        <p class="desc">One trading account, perfect for testing the strategy live.</p>
+        <div class="amount">R3,000 <span>/ 3 months</span></div>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trades EUR/USD, USD/JPY &amp; Gold (XAU/USD)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>1 live account license</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>MT4 or MT5 build</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Setup guide + WhatsApp support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Active &amp; updated for 3 months</li>
+        </ul>
+        <button class="btn btn-ghost btn-block wa-cta" data-msg="Hi! I'd like to buy the Starter plan of QuantumScalper (R3,000 / 3 months).">Buy Starter</button>
+      </div>
+
+      <div class="price-card featured reveal">
+        <h3>Pro</h3>
+        <p class="desc">For traders running multiple accounts or a prop-firm challenge.</p>
+        <div class="amount">R9,000 <span>/ 3 months</span></div>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trades US30, Volatility 50 Index &amp; Germany 30</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Up to 3 live accounts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>MT4 and MT5 builds</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Priority WhatsApp support</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Custom risk profile setup</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Active &amp; updated for 3 months</li>
+        </ul>
+        <button class="btn btn-primary btn-block wa-cta" data-msg="Hi! I'd like to buy the Pro plan of QuantumScalper (R9,000 / 3 months).">Buy Pro</button>
+      </div>
+
+      <div class="price-card reveal">
+        <h3>Unlimited</h3>
+        <p class="desc">Unlimited accounts, ideal for managers and serious portfolios.</p>
+        <div class="amount">R30,000 <span>/ 3 months</span></div>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trades Gold (XAU/USD) &amp; Nasdaq 100</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Unlimited live accounts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>MT4 and MT5 builds</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>1:1 setup call on WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Early access to new modules</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Active &amp; updated for 3 months</li>
+        </ul>
+        <button class="btn btn-ghost btn-block wa-cta" data-msg="Hi! I'd like to buy the Unlimited plan of QuantumScalper (R30,000 / 3 months).">Buy Unlimited</button>
+      </div>
+
+    </div>
+
+    <div class="instruments reveal">
+      <h3 class="instruments-title">Which pairs &amp; instruments does each plan trade?</h3>
+      <p class="instruments-sub">Each plan is tuned to trade a focused set of instruments — here's exactly what's included in each.</p>
+      <div class="instruments-table-wrap">
+        <table class="instruments-table">
+          <thead>
+            <tr>
+              <th>Instrument</th>
+              <th>Starter<br><span>R3,000</span></th>
+              <th>Pro<br><span>R9,000</span></th>
+              <th>Unlimited<br><span>R30,000</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group-row"><td colspan="4">Currency pairs</td></tr>
+            <tr><td>EUR/USD</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>USD/JPY</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+
+            <tr class="group-row"><td colspan="4">Metals</td></tr>
+            <tr><td>XAU/USD (Gold)</td><td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td></tr>
+
+            <tr class="group-row"><td colspan="4">Synthetic indices</td></tr>
+            <tr><td>Volatility 50 Index</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td></tr>
+
+            <tr class="group-row"><td colspan="4">Global indices</td></tr>
+            <tr><td>US30</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td></tr>
+            <tr><td>Germany 30</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td></tr>
+            <tr><td>Nasdaq 100</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">From the community</span>
+      <h2>Traders who let the robot take the wheel</h2>
+    </div>
+    <div class="test-grid">
+
+      <div class="test-card reveal">
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p>"The spread filter alone saved me from three bad NFP fills in the first month. Setup over WhatsApp took maybe ten minutes."</p>
+        <div class="test-who">
+          <div class="test-avatar">RK</div>
+          <div><b>Rian K.</b><span>Pro plan, 4 accounts</span></div>
+        </div>
+      </div>
+
+      <div class="test-card reveal">
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p>"I run a prop firm challenge account with it. The daily drawdown shield is the reason I haven't blown a single evaluation."</p>
+        <div class="test-who">
+          <div class="test-avatar">MS</div>
+          <div><b>Maya S.</b><span>Unlimited plan</span></div>
+        </div>
+      </div>
+
+      <div class="test-card reveal">
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p>"Support genuinely replies on WhatsApp within the hour. Helped me re-tune lot sizing after I moved to a smaller account."</p>
+        <div class="test-who">
+          <div class="test-avatar">DO</div>
+          <div><b>David O.</b><span>Starter plan</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Everything before you buy</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item reveal">
+        <button class="faq-q">Which platforms does QuantumScalper run on?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><p>Both MetaTrader 4 and MetaTrader 5, on any broker that allows expert advisors and market or ECN execution. Tell us your platform on WhatsApp and we'll send the matching build.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">Do I need a VPS to run it?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><p>A VPS isn't required, but it's recommended so the robot stays connected 24/7 without depending on your own computer or internet. We can point you to a budget-friendly option when you message us.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">How long does my license last?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><p>Every plan runs for 3 months from the day it's issued. When that period ends, QuantumScalper stops opening new trades until you renew. Renewing is just a WhatsApp message away — you pay the same plan price again and we send a fresh license key, usually within minutes.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">Is there a refund policy?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><p>Because a license key is issued instantly on purchase, sales are final once the file has been delivered. We do offer free setup support and settings adjustments over WhatsApp for the full length of your active license.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">Can I try it before buying?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes — you can trial it on a real trading account for 7 days at a fee of R200. It runs the full live logic with no restrictions during that period.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q">Is trading forex risky?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes. Leveraged forex trading carries a real risk of loss, and no robot — including QuantumScalper — can guarantee profits. We recommend starting on a demo or small live account and never risking money you can't afford to lose.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="wrap">
+    <div class="cta-panel reveal">
+      <h2>Ready to put the robot to work?</h2>
+      <p>Message us on WhatsApp now — we'll confirm your plan, send your license, and have you live within the hour.</p>
+      <div class="btn-actions">
+        <button class="btn btn-primary wa-cta" data-msg="Hi! I'd like to buy QuantumScalper — can you help me pick a plan?">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.87 9.87 0 0 0 4.76 1.21h.01c5.46 0 9.91-4.45 9.91-9.92C21.96 6.45 17.5 2 12.04 2Zm5.83 14.1c-.24.68-1.4 1.3-1.93 1.35-.5.05-1 .24-3.35-.7-2.84-1.14-4.66-3.99-4.8-4.18-.14-.19-1.14-1.52-1.14-2.9 0-1.37.72-2.05.97-2.33.25-.28.56-.35.75-.35.19 0 .38 0 .54.01.17.01.4-.06.63.48.24.56.8 1.94.87 2.08.07.14.12.31.02.5-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.21.72-.84.92-1.13.19-.29.38-.24.63-.14.25.1 1.62.76 1.9.9.28.14.46.21.53.33.08.12.08.68-.16 1.36Z"/></svg>
+          Message us on WhatsApp
+        </button>
+        <a href="#pricing" class="btn btn-ghost">Compare plans</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <p class="footer-risk"><strong>Risk disclosure:</strong> Trading forex on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade, carefully consider your investment objectives, experience level, and risk appetite. QuantumScalper is a trading tool, not financial advice, and past or simulated performance shown on this page does not guarantee future results.</p>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 100 100" fill="none" style="width:28px;height:28px;">
+            <path d="M50 8 C72 8 88 26 88 50 C88 68 76 82 60 87 L60 68 C70 63 76 57 76 46 C76 30 64 20 50 20 C36 20 24 30 24 46 C24 58 31 66 42 70 L42 90 L58 90 L58 76 L50 76 C34 76 12 64 12 46 C12 26 28 8 50 8 Z" fill="#33ee8c"/>
+          </svg>
+          <span class="brand-name">Quantum<span>Scalper</span></span>
+        </div>
+        <p>An adaptive forex scalping robot for MT4/MT5, sold and supported directly over WhatsApp.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#performance">Performance</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="wa-cta" href="#" data-msg="Hi, I have a question about QuantumScalper.">WhatsApp us</a></li>
+          <li><a href="#how">Setup guide</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> QuantumScalper. All rights reserved.</span>
+      <span>Built for traders, delivered on WhatsApp.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="#" class="wa-float wa-cta" data-msg="Hi! I'd like to buy QuantumScalper." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.87 9.87 0 0 0 4.76 1.21h.01c5.46 0 9.91-4.45 9.91-9.92C21.96 6.45 17.5 2 12.04 2Zm5.83 14.1c-.24.68-1.4 1.3-1.93 1.35-.5.05-1 .24-3.35-.7-2.84-1.14-4.66-3.99-4.8-4.18-.14-.19-1.14-1.52-1.14-2.9 0-1.37.72-2.05.97-2.33.25-.28.56-.35.75-.35.19 0 .38 0 .54.01.17.01.4-.06.63.48.24.56.8 1.94.87 2.08.07.14.12.31.02.5-.1.19-.15.31-.3.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.08.17-.21.72-.84.92-1.13.19-.29.38-.24.63-.14.25.1 1.62.76 1.9.9.28.14.46.21.53.33.08.12.08.68-.16 1.36Z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
